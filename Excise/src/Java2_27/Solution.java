@@ -2,7 +2,7 @@ package Java2_27;
 
 
 public class Solution {
-    static class ListNode{
+    static class ListNode {
         int val;
         ListNode next;
 
@@ -13,7 +13,7 @@ public class Solution {
 
     public ListNode partition(ListNode pHead, int x) {
         // 若链表位空直接返回null
-        if (pHead == null){
+        if (pHead == null) {
             return null;
         }
         // 创建两个具有傀儡结点的链表，用来存放数值 x 两边的值
@@ -23,13 +23,13 @@ public class Solution {
         ListNode cur = pHead;
         ListNode smallCur = smallHead;
         ListNode bigCur = bigHead;
-        while(cur != null){
-            if (cur.val < x){
+        while (cur != null) {
+            if (cur.val < x) {
                 ListNode newNode = new ListNode(cur.val);
                 smallCur.next = newNode;
                 smallCur = smallCur.next;
                 cur = cur.next;
-            }else{
+            } else {
                 ListNode newNode = new ListNode(cur.val);
                 bigCur.next = newNode;
                 bigCur = bigCur.next;
