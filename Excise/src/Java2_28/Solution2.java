@@ -19,18 +19,18 @@ public class Solution2 {
         ListNode prev = head; // prev 是 cur 前面的一个元素
         ListNode cur = head.next;
         while (cur != null) {
-            if (cur.val == val){
+            if (cur.val == val) {
                 // 需要删除的结点
                 prev.next = cur.next;
                 cur = cur.next;
-            }else {
+            } else {
                 // 不需要删除的结点
                 prev = prev.next;
                 cur = cur.next;
             }
         }
         // 再删除头结点
-        if (head.val == val){
+        if (head.val == val) {
             head = head.next;
         }
         return head;
