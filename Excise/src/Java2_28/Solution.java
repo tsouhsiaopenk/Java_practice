@@ -16,7 +16,7 @@ public class Solution {
     * 给定一个带有头结点 head 的非空单链表，返回链表的中间结点。
     如果有两个中间结点，则返回第二个中间结点。
  */
-    public ListNode middleNode(ListNode head) {
+    public ListNode MiddleNode(ListNode head) {
         // 先排除特殊情况
         if (head == null) {
             return null;
@@ -38,5 +38,13 @@ public class Solution {
             pHead = pHead.next;
         }
         return size;
+    }
+    public ListNode middleNode(ListNode head) {
+        int size = Size(head);
+        int steps = size/2;
+        for (int i = 0; i < steps; i++) {
+            head = head.next;
+        }
+        return head;
     }
 }
