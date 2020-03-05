@@ -1,6 +1,5 @@
 package Java3_1;
 
-import java.util.List;
 
 public class PalindromeList {
     static class ListNode {
