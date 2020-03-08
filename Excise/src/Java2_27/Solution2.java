@@ -3,7 +3,7 @@ package Java2_27;
 public class Solution2 {
     static class ListNode {
         int val;
-        Solution.ListNode next;
+        ListNode next;
 
         public ListNode(int val) {
             this.val = val;
@@ -12,7 +12,7 @@ public class Solution2 {
     /*
      * 输入一个链表，输出该链表中倒数第k个结点。
      * */
-    public Solution.ListNode FindKthToTail(Solution.ListNode head, int k) {
+    public ListNode FindKthToTail(ListNode head, int k) {
         if (head == null) {
             return null;
         }
@@ -23,14 +23,14 @@ public class Solution2 {
         }
         // 链表需要往后走steps步数才能找到
         int steps = size - k;
-        Solution.ListNode kNode = head;
+        ListNode kNode = head;
         for (int i = 0; i < steps; i++) {
             kNode = kNode.next;
         }
         return kNode;
     }
 
-    private int Size(Solution.ListNode pHead) {
+    private int Size(ListNode pHead) {
         int size = 0;
         if (pHead == null) {
             return 0;

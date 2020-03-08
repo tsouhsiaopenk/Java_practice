@@ -3,7 +3,7 @@ package Java2_27;
 public class Solution1 {
     static class ListNode {
         int val;
-        Solution.ListNode next;
+        ListNode next;
 
         public ListNode(int val) {
             this.val = val;
@@ -13,7 +13,7 @@ public class Solution1 {
            将两个有序链表合并为一个新的有序链表并返回。
            新链表是通过拼接给定的两个链表的所有节点组成的。
     */
-    public Solution.ListNode mergeTwoLists(Solution.ListNode l1, Solution.ListNode l2) {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // 先排除极端情况
         if (l1 == null) {
             return l2;
@@ -22,19 +22,19 @@ public class Solution1 {
             return l1;
         }
         // 创建一个新的链表，表示合并后的链表
-        Solution.ListNode newListNode = new Solution.ListNode(-1);
-        Solution.ListNode newTail = newListNode;
+        ListNode newListNode = new ListNode(-1);
+        ListNode newTail = newListNode;
         // 1,l1 和 l2 都不为空的情况
-        Solution.ListNode cur1 = l1;
-        Solution.ListNode cur2 = l2;
+        ListNode cur1 = l1;
+        ListNode cur2 = l2;
         while (cur1 != null && cur2 != null) {
             if (cur1.val < cur2.val) {
-                Solution.ListNode newNode = new Solution.ListNode(cur1.val);
+                ListNode newNode = new ListNode(cur1.val);
                 newTail.next = newNode;
                 newTail = newTail.next;
                 cur1 = cur1.next;
             } else {
-                Solution.ListNode newNode = new Solution.ListNode(cur2.val);
+                ListNode newNode = new ListNode(cur2.val);
                 newTail.next = newNode;
                 newTail = newTail.next;
                 cur2 = cur2.next;
