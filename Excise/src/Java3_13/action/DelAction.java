@@ -5,7 +5,7 @@ import Java3_13.book.BookList;
 
 import java.util.Scanner;
 
-public class DelAction implements IAction{
+public class DelAction implements IAction {
     @Override
     public void work(BookList bookList) {
         /*
@@ -20,19 +20,19 @@ public class DelAction implements IAction{
         int i = 0;
         for (; i < bookList.getSize(); i++) {
             Book book = bookList.getBook(i);
-            if (book.getName().equals(name)){
+            if (book.getName().equals(name)) {
                 break;
             }
         }
-        if (i >= bookList.getSize()){
+        if (i >= bookList.getSize()) {
             System.out.println("没有找到能够匹配的书籍，删除失败！");
             return;
         }
         // 将最后一本图书，移动到i的位置
         int size = bookList.getSize();
-        Book book = bookList.getBook(size-1);
-        bookList.setBook(book,i);
-        bookList.setSize(size-1);
+        Book book = bookList.getBook(size - 1);
+        bookList.setBook(book, i);
+        bookList.setSize(size - 1);
         System.out.println("删除成功！");
     }
 }

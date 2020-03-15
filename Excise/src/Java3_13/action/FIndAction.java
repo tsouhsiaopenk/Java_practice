@@ -14,7 +14,7 @@ public class FIndAction implements IAction {
         String name = scanner.next();
         for (int i = 0; i < bookList.getSize(); i++) {
             Book book = bookList.getBook(i);
-            if (book.getName().equals(name)){
+            if (book.getName().equals(name)) {
                 System.out.println(book);
                 System.out.println("查找完成");
             }

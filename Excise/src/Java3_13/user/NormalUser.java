@@ -29,7 +29,7 @@ public class NormalUser extends User {
         Scanner scanner = new Scanner(System.in);
         do {
             choice = scanner.nextInt();
-        } while (choice < 0 || choice > 3) ;
+        } while (choice < 0 || choice > 3);
         return choice;
     }
 }
