@@ -12,10 +12,10 @@ public class Solution {
         if (haystack.length() < needle.length()) {
             return -1;
         }
-        for (int i = 0; i < haystack.length(); i++) {
+        for (int i = 0; i < haystack.length() - needle.length() + 1; i++) {
             int cur = i;
             // 子串从当前父串的位置开始进行匹配
-            for (int j = 0; j < needle.length(); j++) {
+            for (int j = 0; j < needle.length() && cur < haystack.length(); j++) {
                 // 两个字符比较
                 if (needle.charAt(j) == haystack.charAt(cur)) {
                     if (j == (needle.length() - 1) && haystack.charAt(cur) == needle.charAt(j)) {
@@ -35,7 +35,7 @@ public class Solution {
         Solution solution = new Solution();
         String text = "mississippi";
         String pattern = "ssipi";
-        int result = solution.strStr(text,pattern);
+        int result = solution.strStr(text, pattern);
         System.out.println(result);
     }
 }
