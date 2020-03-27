@@ -24,7 +24,7 @@ public class MyQueueByLinkedList {
             return;
         }
         // 队列非空
-        tail.next = newNode; 9
+        tail.next = newNode;
         tail = tail.next;
     }
 
