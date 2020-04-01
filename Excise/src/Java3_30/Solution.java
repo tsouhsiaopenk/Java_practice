@@ -112,11 +112,11 @@ public class Solution {
     // 针对当前节点，求左右字数的高度，看差值是否大于1
     // 递归判断该树的左右子树是否平衡
     public boolean isBalanced(TreeNode root) {
-        if (root == null){
+        if (root == null) {
             // 空树认为是平衡的
             return true;
         }
-        if (root.left == null && root.right ==null){
+        if (root.left == null && root.right == null) {
             // 只有根节点（没有子树），认为是平衡的
             return true;
         }
@@ -124,45 +124,48 @@ public class Solution {
         // 其他情况下，判断是否平衡
         int left = maxDepth(root.left);
         int right = maxDepth(root.right);
-        if (Math.abs(left - right) > 1){
+        if (Math.abs(left - right) > 1) {
             return false;
         }
         return isBalanced(root.left) && isBalanced(root.right);
     }
+
     // 对称二叉树
     public boolean isSymmetric(TreeNode root) {
         // 树是否对称？
         // 看左子树和右子树是否为镜像关系
-        if (root == null){
+        if (root == null) {
             return true;
         }
-        return isMirror(root.left,root.right);
+        return isMirror(root.left, root.right);
     }
-    private boolean isMirror(TreeNode t1,TreeNode t2){
-        if (t1 == null && t2 == null){
+
+    private boolean isMirror(TreeNode t1, TreeNode t2) {
+        if (t1 == null && t2 == null) {
             return true;
         }
-        if (t1 == null || t2 == null){
+        if (t1 == null || t2 == null) {
             // 一个为空，一个非空
             return false;
         }
-        if (t1.val != t2.val){
+        if (t1.val != t2.val) {
             // 两个树的根节点值不同，肯定不是镜像关系
             return false;
         }
-        return isMirror(t1.left,t2.right) && isMirror(t1.right,t2.left);
+        return isMirror(t1.left, t2.right) && isMirror(t1.right, t2.left);
     }
+
     // 层序遍历
-    public void levelOrder(TreeNode root){
+    public void levelOrder(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             TreeNode cur = queue.poll();
             System.out.print(cur.val + " ");
-            if (root.left!=null){
+            if (root.left != null) {
                 queue.offer(root.left);
             }
-            if (root.right!=null){
+            if (root.right != null) {
                 queue.offer(root.right);
             }
         }
