@@ -49,7 +49,6 @@ public class Solution4 {
                     return false;
                 }
             }
-
         }
         return true;
     }
