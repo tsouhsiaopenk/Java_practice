@@ -2,8 +2,12 @@ package Java4_8;
 
 public class MyPriorityQueue {
     // 以大堆为例子
-    private int[] array = new int[100];
+    private int[] array = new int[30];
     private int size = 0;
+
+    public int getSize() {
+        return size;
+    }
 
     public void offer(int val) {
         array[size] = val;
@@ -77,4 +81,5 @@ public class MyPriorityQueue {
             System.out.print(cur + " ");
         }
     }
+
 }
