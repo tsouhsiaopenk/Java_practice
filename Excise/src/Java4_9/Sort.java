@@ -80,28 +80,32 @@ public class Sort {
             在传进来数组上直接搞一个大堆，然后将堆的第一个和最后一个（当前堆，上一次已经交换的元素除外）交换。
             这样不断重复，就能够从后到前使数组有序。
      */
-    public static void swap(int[] array,int a,int b){
+    private static void swap(int[] array, int a, int b) {
         int tmp = array[a];
         array[a] = array[b];
         array[b] = tmp;
     }
+
     public static void heapSort(int[] array) {
         // 1.用传进来的数组建立一个大堆
-        createHeap(array,array.length);
-        for (int i = 0; i < array.length -1; i++) {
+        createHeap(array);
+        // 循环 array.length - 1 次,最后一次它本身，不用交换
+        for (int i = 0; i < array.length - 1; i++) {
             // 2.将第一个和最后一个（相对）元素交换
-            int lastPos = array.length - i;
-            swap(array, 0, lastPos);
-            lastPos--;
+            //    相对位置的最后一个下标始终向前移动一个位置
+            // 堆的个数
+            int heapSize = array.length - i;
+            swap(array, 0, heapSize - 1);
+            heapSize--;
             // 3.将剩余部分重新向下调整使保持堆结构
-            shiftDown(array, lastPos,0);
+            shiftDown(array, heapSize, 0);
         }
     }
 
-    private static void createHeap(int[] array, int size) {
+    private static void createHeap(int[] array) {
         // 从后往前对每一个元素进行向下调整
-        for (int index = (size - 1 - 1) / 2; index < array.length; index--) {
-            shiftDown(array, size, index);
+        for (int index = (array.length - 1 - 1) / 2; index >= 0; index--) {
+            shiftDown(array, array.length, index);
         }
     }
 
@@ -129,13 +133,27 @@ public class Sort {
 
     }
 
+    public static void bubbleSort(int[] array) {
+        for (int bound = 0; bound < array.length; bound++) {
+            // [0,bound) 已经排序区间
+            // [bound,size) 待排序算法
+            for (int cur = array.length - 1; cur > bound; cur--) {
+                if (array[cur] < array[cur - 1]) {
+                    int tmp = array[cur];
+                    array[cur] = array[cur - 1];
+                    array[cur - 1] = tmp;
+                }
+            }
+        }
+    }
 
     public static void main(String[] args) {
         int[] array = new int[]{4, 3, 5, 9, 1, 2, 0};
         // insertSort(array);
         // shellSort(array);
         // selectSort(array);
-        heapSort(array);
+        // heapSort(array);
+        bubbleSort(array);
         System.out.println(Arrays.toString(array));
     }
 }
