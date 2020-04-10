@@ -33,9 +33,8 @@ public class Sort {
 
     // 希尔排序
     public static void shellSort(int[] array) {
-        // gap 怎么设计
         int gap = array.length / 2;
-        while (gap > 1) {
+        while (gap >= 1) {
             insertSortGap(array, gap);
             gap /= 2;
         }
@@ -150,10 +149,10 @@ public class Sort {
     public static void main(String[] args) {
         int[] array = new int[]{4, 3, 5, 9, 1, 2, 0};
         // insertSort(array);
-        // shellSort(array);
+        //shellSort(array);
         // selectSort(array);
         // heapSort(array);
-        bubbleSort(array);
+         bubbleSort(array);
         System.out.println(Arrays.toString(array));
     }
 }
