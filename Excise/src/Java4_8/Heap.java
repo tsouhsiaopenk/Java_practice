@@ -2,6 +2,21 @@ package Java4_8;
 
 import java.util.Arrays;
 
+class test {
+    public static void main(String[] args) {
+        // 找出 前三大 的
+        int[] arr = new int[]{9, 5, 2, 7, 8, 3};
+        MyPriorityQueue queue = new MyPriorityQueue();
+        for (int i = 0; i < arr.length; i++) {
+            queue.offer(arr[i]);
+        }
+        int k = 3;
+        for (int i = 0; i < k ; i++) {
+            System.out.print(queue.poll() + " ");
+        }
+    }
+}
+
 public class Heap {
     // 我们在此处以大堆为例来，来向下调整
     /*
