@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Stack;
 
-public class TestSort {
+public class testSort {
     public static void quickSort(int[] array) {
         // 辅助完成递归过程
         // 此处为了代码简单, 区间设定成前闭后闭.
