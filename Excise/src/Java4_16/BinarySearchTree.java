@@ -1,7 +1,5 @@
 package Java4_16;
 
-import javax.imageio.stream.ImageInputStream;
-
 /*
     二叉搜索数的实现：
     1.插入
@@ -142,5 +140,29 @@ public class BinarySearchTree {
                 goatParent.right = scapeGoat.right;
             }
         }
+    }
+    public void inOrder(Node root){
+        if (root == null){
+            return;
+        }
+        inOrder(root.left);
+        System.out.println(root.key);
+        inOrder(root.right);
+    }
+    public static void main(String[] args) {
+        BinarySearchTree bst = new BinarySearchTree();
+        // 7 3 8 2 9 4 11
+
+        // 2 3 4 7 8 9 11
+
+        // 11 2 9 3 8 4 7
+        bst.insert(11);
+        bst.insert(2);
+        bst.insert(9);
+        bst.insert(3);
+        bst.insert(8);
+        bst.insert(4);
+        bst.insert(7);
+        bst.inOrder(bst.root);
     }
 }
