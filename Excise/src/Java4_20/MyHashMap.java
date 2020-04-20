@@ -1,7 +1,7 @@
 package Java4_20;
 
 // 通过开散列的方式来处理 hash 冲突
-public class MyHash {
+public class MyHashMap {
     static class Node {
         public int key;
         public int value;
@@ -65,7 +65,7 @@ public class MyHash {
         array = newArray;
     }
 
-    public Integer get(int key) {
+    public int get(int key) {
         // 1.先计算出 key 对应的下标
         int index = hashFunc(key);
         // 2.根据下标找到对应的链表
@@ -76,6 +76,45 @@ public class MyHash {
                 return cur.value;
             }
         }
-        return null;
+        return -1;
+    }
+
+    public void remove(int key){
+        if (get(key) == -1){
+            return;
+        }
+        // 1.先计算出 key 对应的下标
+        int index = hashFunc(key);
+        // 2.根据下标找到对应的链表
+        Node list = array[index];
+        // 3.在链表中查找指定元素
+        Node preNode  = list;
+        Node cur = list.next;
+        if (preNode.key== key){
+            list = list.next;
+            array[index] = list;
+        }
+        while (cur != null){
+            if (cur.key == key){
+                preNode = cur.next;
+                array[index] = list;
+                return;
+            }else {
+                preNode = cur;
+                cur = cur.next;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        MyHashMap hashMap = new MyHashMap();
+        hashMap.put(1,1);
+        hashMap.put(2,2);
+        System.out.println(hashMap.get(1));
+        System.out.println(hashMap.get(3));
+        hashMap.put(2,1);
+        System.out.println(hashMap.get(2));
+        hashMap.remove(2);
+        System.out.println(hashMap.get(2));
     }
 }
