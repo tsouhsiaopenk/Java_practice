@@ -1,7 +1,5 @@
 package Java4_20;
 
-
-import javax.print.DocFlavor;
 import java.util.*;
 
 public class Solution {
