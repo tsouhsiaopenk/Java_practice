@@ -17,10 +17,10 @@ public class ThreadVsThreadPool {
          * 雇佣两个人，让他们送快递
          * 同时，我也在干自己的事情
          */
-        new Thread(()->{
+        new Thread(() -> {
             System.out.println("送快递到北京");
         }).start();
-        new Thread(()->{
+        new Thread(() -> {
             System.out.println("送快递到上海");
         }).start();
         System.out.println("处理自己的业务");
@@ -35,7 +35,7 @@ public class ThreadVsThreadPool {
                 TimeUnit.SECONDS,// 时间单位
                 new ArrayBlockingQueue<>(1000),
                 // 阻塞队列：快递公司的仓库，保存快递的包裹。——存放线程的容器
-                new ThreadFactory(){
+                new ThreadFactory() {
 
                     @Override
                     public Thread newThread(Runnable r) {
@@ -44,10 +44,10 @@ public class ThreadVsThreadPool {
                 },
                 new ThreadPoolExecutor.DiscardPolicy()
         );
-        pool.execute(()->{
+        pool.execute(() -> {
             System.out.println("送快递到北京");
         });
-        pool.execute(()->{
+        pool.execute(() -> {
             System.out.println("送快递到上海");
         });
         System.out.println("干自己的事");
