@@ -9,16 +9,16 @@ public class SequencePrint {
      * （2）打印结果：ABC
      * 思路：join
      */
-    public static void print(){
-        Thread t1 = new Thread(new Print("A",null));
-        Thread t2 = new Thread(new Print("B",t1));
-        Thread t3 = new Thread(new Print("C",t2));
+    public static void print() {
+        Thread t1 = new Thread(new Print("A", null));
+        Thread t2 = new Thread(new Print("B", t1));
+        Thread t3 = new Thread(new Print("C", t2));
         t1.start();
         t2.start();
         t3.start();
     }
 
-    private static class Print implements Runnable{
+    private static class Print implements Runnable {
         private String content;
         private Thread t;
 
@@ -30,7 +30,7 @@ public class SequencePrint {
         @Override
         public void run() {
             try {
-                if (t!=null)
+                if (t != null)
                     t.join();
                 System.out.println(content);
             } catch (InterruptedException e) {
