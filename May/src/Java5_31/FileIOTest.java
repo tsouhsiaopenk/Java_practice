@@ -1,6 +1,5 @@
 package Java5_31;
 
-import com.sun.javafx.logging.JFRInputEvent;
 import org.junit.Test;
 
 import java.io.File;

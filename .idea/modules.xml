@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/June/June.iml" filepath="$PROJECT_DIR$/June/June.iml" />
       <module fileurl="file://$PROJECT_DIR$/May/May.iml" filepath="$PROJECT_DIR$/May/May.iml" />
     </modules>
   </component>
