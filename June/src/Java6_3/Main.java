@@ -7,11 +7,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNextInt()) {
+            // 传进来空瓶子数目
             int emptyBottleNumber = scanner.nextInt();
-            // 传进来的 0 不用处理，且程序到此处结束。
-            if (emptyBottleNumber == 0) {
-                return;
-            }
+            // 输出最多可以兑换的汽水数目
             System.out.println(maxSodaNumber(emptyBottleNumber));
         }
     }
@@ -22,7 +20,7 @@ public class Main {
             return 0;
         }
         // 特殊情况二：瓶子数量为二的话，刚好可以换到一瓶
-        if (emptyBottleNumber == 2){
+        if (emptyBottleNumber == 2) {
             return 1;
         }
         // 最后返回的结果
