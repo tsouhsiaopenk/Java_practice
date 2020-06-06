@@ -1,4 +1,4 @@
-package Java6_6;
+package Java6_6.OJ;
 
 import java.util.ArrayList;
 import java.util.List;
