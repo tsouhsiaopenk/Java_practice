@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="maven_test" />
+        <module name="Serclet-blog" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="maven_test" target="1.8" />
+      <module name="Serclet-blog" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

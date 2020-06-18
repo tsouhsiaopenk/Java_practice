@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Compiler Principle/Compiler Principle.iml" filepath="$PROJECT_DIR$/Compiler Principle/Compiler Principle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/June/CompilerPrinciple.iml" filepath="$PROJECT_DIR$/June/CompilerPrinciple.iml" />
       <module fileurl="file://$PROJECT_DIR$/June/June.iml" filepath="$PROJECT_DIR$/June/June.iml" />
       <module fileurl="file://$PROJECT_DIR$/May/May.iml" filepath="$PROJECT_DIR$/May/May.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Serclet-blog/Serclet-blog.iml" filepath="$PROJECT_DIR$/Serclet-blog/Serclet-blog.iml" />
       <module fileurl="file://$PROJECT_DIR$/maven_test/maven_test.iml" filepath="$PROJECT_DIR$/maven_test/maven_test.iml" />
     </modules>
   </component>

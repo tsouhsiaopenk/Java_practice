@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Serclet-blog:war">
+    <output-path>$PROJECT_DIR$/Serclet-blog/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Serclet-blog</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="blogdemo.war">
+      <element id="artifact" artifact-name="Serclet-blog:war exploded" />
+    </root>
+  </artifact>
+</component>
