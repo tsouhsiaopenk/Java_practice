@@ -11,7 +11,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="Serclet-blog" />
+          <element id="module-output" name="Servlet-blog" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.38" />
@@ -26,9 +26,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/Serclet-blog/target/blogdemo/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/Servlet-blog/target/blogdemo/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="Serclet-blog/web/Web" />
+      <element id="javaee-facet-resources" facet="Servlet-blog/web/Web" />
     </root>
   </artifact>
 </component>

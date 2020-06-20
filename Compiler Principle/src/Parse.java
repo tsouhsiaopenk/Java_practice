@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * 递归下降子程序
  */
@@ -14,7 +16,7 @@ public class Parse {
     public void match(char token) {
         if (index == (exp.length() - 1)) {
             System.out.println("合法！");
-            // System.exit(0);
+            System.exit(0);
         } else if (exp.charAt(index) == token) {
             index++;
         } else {
@@ -85,14 +87,21 @@ public class Parse {
     }
 
     public static void main(String[] args) {
-        // 测试数据第一行为合法数据，第二行为非法数据
-        String [] tests = {
-                "i*i*i", "i+i+i", "i+i*i", "i*i+i",
-                "i++i","i**i"};
-        // 遍历测试用例，来检测程序
-        for (int i = 0; i < tests.length; i++) {
-                Parse parse = new Parse(tests[i]);
-                parse.E();
+//        // 测试数据第一行为合法数据，第二行为非法数据
+//        String [] tests = {
+//                "i*i*i", "i+i+i", "i+i*i", "i*i+i",
+//                "i++i","i**i"};
+//        // 遍历测试用例，来检测程序
+//        for (int i = 0; i < tests.length; i++) {
+//                Parse parse = new Parse(tests[i]);
+//                parse.E();
+//        }
+
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNext()){
+            String s = scanner.next();
+            Parse parse = new Parse(s);
+            parse.E();
         }
     }
 }

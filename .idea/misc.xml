@@ -2,7 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/maven_test" />
-    <file type="web" url="file://$PROJECT_DIR$/Serclet-blog" />
+    <file type="web" url="file://$PROJECT_DIR$/Servlet-blog" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -10,6 +10,11 @@
         <option value="$PROJECT_DIR$/maven_test/pom.xml" />
         <option value="$PROJECT_DIR$/Serclet-blog/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Servlet-blog/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager">
