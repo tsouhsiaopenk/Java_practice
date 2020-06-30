@@ -3,55 +3,43 @@ package Java6_27.OJ;
 
 import java.util.Scanner;
 
+/**
+ * 此题坑人的地方有两处：
+ * 1,不止输入一组n m ;
+ * 2,AB之间，可能A>B
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        while (scanner.hasNextInt()) {
+        while (scanner.hasNext()) {
             // 学生数目
             int N = scanner.nextInt();
             // 操作数目
             int M = scanner.nextInt();
-            // 创建数组来存放学生成绩（舍弃下标为0的地址）
-            int[] arr = new int[N + 1];
-            for (int i = 1; i < arr.length; i++) {
-                arr[i] = scanner.nextInt();
+            // 创建数组来存放学生成绩
+            int[] stu = new int[N];
+            for (int i = 0; i < N; i++) {
+                stu[i] = scanner.nextInt();
             }
             for (int i = 0; i < M; i++) {
-                char c = scanner.next().charAt(0);
+                String s = scanner.next();
                 int A = scanner.nextInt();
                 int B = scanner.nextInt();
                 // Q 为询问操作，询问id在[A,B]的学生中，成绩最高的是多少
-                if (c == 'Q') {
-                    int max = 0;
-                    for (int j = A; j <= B; j++) {
-                        if (max < arr[j]) {
-                            max = arr[j];
-                        }
+                if (s.equals("Q")) {
+                    int left = Math.min(A, B);
+                    int right = Math.max(A, B);
+                    int max = stu[left- 1];
+                    for (int j = left; j < right; j++) {
+                        max = Math.max(max, stu[j]);
                     }
                     System.out.println(max);
                 }
-                if (c == 'U') {
+                if (s.equals("U")) {
                     // U 代表更新操作
-                    arr[A] = B;
-                }
-                // operator(arr, c, A, B);
-            }
-        }
-    }
-
-    private static void operator(int[] arr, char c, int A, int B) {
-        // Q 为询问操作，询问id在[A,B]的学生中，成绩最高的是多少
-        if (c == 'Q') {
-            int max = 0;
-            for (int i = A; i <= B; i++) {
-                if (max < arr[i]) {
-                    max = arr[i];
+                    stu[A - 1] = B;
                 }
             }
-            System.out.println(max);
-        } else if (c == 'U') {
-            // U 代表更新操作
-            arr[A] = B;
         }
     }
 }
