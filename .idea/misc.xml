@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/maven_test" />
+    <file type="web" url="file://$PROJECT_DIR$/MavenDemonstrate" />
     <file type="web" url="file://$PROJECT_DIR$/Servlet-blog" />
   </component>
   <component name="MavenProjectsManager">
@@ -9,15 +10,14 @@
       <list>
         <option value="$PROJECT_DIR$/maven_test/pom.xml" />
         <option value="$PROJECT_DIR$/Serclet-blog/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/SPM/pom.xml" />
+        <option value="$PROJECT_DIR$/MavenDemonstrate/pom.xml" />
+        <option value="$PROJECT_DIR$/Servlet-blog/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/Servlet-blog/pom.xml" />
-      </set>
-    </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
