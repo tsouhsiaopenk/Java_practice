@@ -17,7 +17,7 @@ public class Solution {
         // 2.计算买两次:将数据分成两部分计算 left [0,bound) [bound,prices.length]
         int second = 0;
         for (int bound = 2; bound < prices.length; bound++) {
-            // Arrays.copyOfRange() 是闭区间
+            // Arrays.copyOfRange() 是左闭右开
             int[] left = Arrays.copyOfRange(prices, 0, bound);
             int[] right = Arrays.copyOfRange(prices, bound, prices.length);
 
