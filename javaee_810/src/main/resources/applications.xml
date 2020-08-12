@@ -22,4 +22,21 @@
         <constructor-arg name="n" value="烤鸭"/>
         <constructor-arg name="a" value="2"/>
     </bean>
+
+    <bean id="d31" class="zxp.Duck3">
+        <property name="name" value="北京烤鸭"/>
+        <property name="age" value="2"/>
+        <property name="next" ref="d32"/>
+    </bean>
+
+    <bean id="d32" class="zxp.Duck3">
+        <property name="name" value="甜皮鸭"/>
+        <property name="age" value="1"/>
+        <property name="next" ref="d33"/>
+    </bean>
+
+    <bean id="d33" class="zxp.Duck3">
+        <property name="name" value="酱鸭"/>
+        <property name="age" value="3"/>
+    </bean>
 </beans>
