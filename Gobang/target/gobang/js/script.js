@@ -161,6 +161,12 @@ function initGame() {
         context.fill();
     }
 
+    /*
+      若 用户1 已经下完就不应该下棋了，定义变量IsUser1Play，若isUser1Play为true表示已经下过了。
+      用户2同理。
+     */
+    var isUser1Play = false;
+    var isUser2Play = false;
     chess.onclick = function (e) {
         if (over) {
             console.log("over被执行");
@@ -178,11 +184,6 @@ function initGame() {
         if (chessBoard[row][col] == 0) {
             //  新增发送数据给服务器的逻辑
             send(row, col);
-            // 绘制棋子
-            // oneStep(col,row,gameInfo.isWhile);
-            // chessBoard[row][col] = 1;
-            // 通过这个语句控制落子轮次
-            // me = !me;
         }
     }
 
@@ -214,9 +215,11 @@ function initGame() {
         if (response.userId == gameInfo.userId) {
             // 当前的棋子是自己落得，于是就根据自己的isWhile来绘制棋子
             oneStep(response.col, response.row, gameInfo.isWhile);
+            me = gameInfo;
         } else {
             // 当前的棋子是对方落的，于是就根据对方的isWhile来绘制棋子
             oneStep(response.col, response.row, !gameInfo.isWhile);
+            me = !gameInfo;
         }
         // 3.给棋盘数组记录位置（防止同一个位置被多次落子）
         chessBoard[response.row][response.col] = 1;
