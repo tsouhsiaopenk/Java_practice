@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/August/August.iml" filepath="$PROJECT_DIR$/August/August.iml" />
       <module fileurl="file://$PROJECT_DIR$/Compiler Principle/Compiler Principle.iml" filepath="$PROJECT_DIR$/Compiler Principle/Compiler Principle.iml" />
       <module fileurl="file://$PROJECT_DIR$/June/CompilerPrinciple.iml" filepath="$PROJECT_DIR$/June/CompilerPrinciple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gobang/Gobang.iml" filepath="$PROJECT_DIR$/Gobang/Gobang.iml" />
       <module fileurl="file://$PROJECT_DIR$/July/July.iml" filepath="$PROJECT_DIR$/July/July.iml" />
       <module fileurl="file://$PROJECT_DIR$/June/June.iml" filepath="$PROJECT_DIR$/June/June.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MavenDemonstrate/MavenDemonstrate.iml" filepath="$PROJECT_DIR$/MavenDemonstrate/MavenDemonstrate.iml" />
       <module fileurl="file://$PROJECT_DIR$/May/May.iml" filepath="$PROJECT_DIR$/May/May.iml" />
+      <module fileurl="file://$PROJECT_DIR$/September/September.iml" filepath="$PROJECT_DIR$/September/September.iml" />
       <module fileurl="file://$PROJECT_DIR$/Servlet-blog/Servlet-blog.iml" filepath="$PROJECT_DIR$/Servlet-blog/Servlet-blog.iml" />
       <module fileurl="file://$PROJECT_DIR$/maven_test/maven_test.iml" filepath="$PROJECT_DIR$/maven_test/maven_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/online_gobang/online_gobang.iml" filepath="$PROJECT_DIR$/online_gobang/online_gobang.iml" />
     </modules>
   </component>
 </project>

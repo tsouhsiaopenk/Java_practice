@@ -82,7 +82,7 @@ public class Solution {
             } else if (Character.isDigit(c)) {
                 // 数字
                 if ('1' <= c && c <= '9'){
-                    c = (char) (c + 1);
+                    c = (char) (c - 1);
                 }else if (c == '0'){
                     c = '9';
                 }

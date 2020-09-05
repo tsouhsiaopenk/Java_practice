@@ -7,17 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MavenDemonstrate" />
-        <module name="Servlet-blog" />
+        <module name="Gobang" />
         <module name="maven_test" />
+        <module name="Servlet-blog" />
+        <module name="online_gobang" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Gobang" target="1.8" />
       <module name="maven_test" target="1.8" />
       <module name="MavenDemonstrate" target="1.8" />
+      <module name="online_gobang" target="1.8" />
       <module name="Servlet" target="1.5" />
       <module name="Servlet-blog" target="1.8" />
       <module name="SPM" target="1.5" />
+      <module name="stu-dorm-sys" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

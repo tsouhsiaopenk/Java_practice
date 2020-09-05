@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Servlet-blog/target/blog/WEB-INF/lib/commons-io-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Servlet-blog/target/blog/WEB-INF/lib/jackson-annotations-2.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Servlet-blog/target/blog/WEB-INF/lib/commons-fileupload-1.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Servlet-blog/target/blog/WEB-INF/lib/jackson-databind-2.8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Servlet-blog/target/blog/WEB-INF/lib/jackson-core-2.8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Servlet-blog/target/blog/WEB-INF/lib/ueditor-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Servlet-blog/target/blog/WEB-INF/lib/json-20160212.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Servlet-blog/target/blog/WEB-INF/lib/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Servlet-blog/target/blog/WEB-INF/lib/mysql-connector-java-5.1.38.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

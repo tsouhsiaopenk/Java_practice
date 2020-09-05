@@ -1,7 +1,10 @@
 package Java7_20.OJ;
 
+
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /*
@@ -15,56 +18,52 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        ArrayList<String> arrayList = new ArrayList<>();
         while (scanner.hasNextInt()) {
             int n = scanner.nextInt();
             String[] strings = new String[n];
             for (int i = 0; i < n; i++) {
                 strings[i] = scanner.next();
                 String s = transform(strings[i]);
-                // 格式化输出 XXX-XXXX
+                // 格式化 XXX-XXXX
                 String first = s.substring(0, 3);
                 String second = s.substring(3);
-                System.out.println(first + "-" + second);
+                String result = first + "-" + second;
+                if (!arrayList.contains(result)){
+                    arrayList.add(result);
+                }
             }
+            Collections.sort(arrayList);
+            for (int i = 0; i < arrayList.size(); i++) {
+                System.out.println(arrayList.get(i));
+            }
+            System.out.println();
         }
     }
 
     private static String transform(String s) {
-        // 1.先去掉 - 符号
+        // 结果集合
         StringBuilder sb = new StringBuilder();
-        for (String string : s.split("-")) {
-            sb.append(string);
-        }
+
+        // 1.先去掉 - 符号
+        s = s.replace("-", "");
         // 2.字母转数字
-        for (int i = 0; i < sb.length(); i++) {
-            char c = sb.charAt(i);
-            // 如果是字母，就转换为数字，数字不用管
-            if (Character.isLetter(c)) {
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            // 如果是大写字母，就转换为数字，数字不用管
+            if (Character.isUpperCase(c)) {
                 char tmp = getNumber(c);
-                sb.setCharAt(i, tmp);
+                sb.append(tmp);
+            }else if(Character.isDigit(c)){
+                sb.append(c);
             }
         }
         return sb.toString();
     }
-
     @Test
-    public void t2() {
-        String str = "123-4567";
-//        StringBuilder sb = new StringBuilder();
-//        for (String string : str.split("-")) {
-//            sb.append(string);
-//        }
-//        System.out.println(sb.toString());
-//        System.out.println(sb.substring(0, 3) + "-" + sb.substring(3));
-        StringBuilder sb = new StringBuilder(str);
-        sb.setCharAt(2, 'c');
-        System.out.println(sb);
-    }
-
-    @Test
-    public void t1() {
-        char c = 'A';
-        System.out.println(getNumber(c));
+    public  void test(){
+        String s = "BC1:51,C2:48.3";
+        System.out.println(transform(s));
     }
 
     private static char getNumber(char c) {

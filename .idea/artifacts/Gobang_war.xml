@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gobang:war">
+    <output-path>$PROJECT_DIR$/Gobang/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Gobang</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Gobang.war">
+      <element id="artifact" artifact-name="Gobang:war exploded" />
+    </root>
+  </artifact>
+</component>

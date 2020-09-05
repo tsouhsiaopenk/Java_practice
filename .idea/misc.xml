@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Gobang" />
     <file type="web" url="file://$PROJECT_DIR$/maven_test" />
     <file type="web" url="file://$PROJECT_DIR$/MavenDemonstrate" />
+    <file type="web" url="file://$PROJECT_DIR$/online_gobang" />
     <file type="web" url="file://$PROJECT_DIR$/Servlet-blog" />
+    <file type="web" url="file://$PROJECT_DIR$/stu-dorm-sys" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES5" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -12,8 +18,9 @@
         <option value="$PROJECT_DIR$/Serclet-blog/pom.xml" />
         <option value="$PROJECT_DIR$/untitled/pom.xml" />
         <option value="$PROJECT_DIR$/SPM/pom.xml" />
-        <option value="$PROJECT_DIR$/MavenDemonstrate/pom.xml" />
         <option value="$PROJECT_DIR$/Servlet-blog/pom.xml" />
+        <option value="$PROJECT_DIR$/Gobang/pom.xml" />
+        <option value="$PROJECT_DIR$/online_gobang/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="stu-dorm-sys:war">
+    <output-path>$PROJECT_DIR$/stu-dorm-sys/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>stu-dorm-sys</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="sds.war">
+      <element id="artifact" artifact-name="stu-dorm-sys:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/stu-dorm-sys/target/sds/WEB-INF/lib/jackson-core-2.8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/stu-dorm-sys/target/sds/WEB-INF/lib/jackson-annotations-2.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/stu-dorm-sys/target/sds/WEB-INF/lib/jackson-databind-2.8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/stu-dorm-sys/target/sds/WEB-INF/lib/mysql-connector-java-5.1.38.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
